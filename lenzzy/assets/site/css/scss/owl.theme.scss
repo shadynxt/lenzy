@@ -1,0 +1,209 @@
+/*
+* 	Owl Carousel Owl Demo Theme 
+*	v1.3.3
+*/
+
+.owl-theme .owl-controls{
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-theme .owl-controls .owl-buttons div{
+	color: #FFF;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+	margin: 5px;
+	padding: 3px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background: #869791;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.5;
+}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+	text-decoration: none;
+}
+
+/* Styling Pagination*/
+
+.owl-theme .owl-controls .owl-page{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span{
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: 5px 7px;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.5;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background: #869791;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+}
+
+/* If PaginationNumbers is true */
+
+.owl-theme .owl-controls .owl-page span.owl-numbers{
+	height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+/* preloading images */
+.owl-item.loading{
+	min-height: 150px;
+	background: url(AjaxLoader.gif) no-repeat center center;
+}
+
+
+
+
+
+/* ====================================================
+ *   Thumbnails slider pagination styling
+ * ==================================================== */
+
+.thumbs-slider {
+	overflow: hidden;
+	// padding-bottom: 40px; // for using pages under slider, or normal padding bottom
+
+	ul {
+		list-style: none;
+		width: auto !important; // important
+		margin: 0 -5px; // important with slide padding
+
+		.slide {
+			padding: 0 5px; // important with ul margin
+		}
+
+		img {
+			width: 100%;
+		}
+	} 
+
+	.owl-pagination {
+	    position: absolute;
+	    bottom: -45px;
+	    width: 100%;
+
+	    .owl-page {
+		    margin: 0 2.5px;
+		    border: 1px solid rgba(0, 0, 0, 0.5);
+		    padding: 3px;
+		    border-radius: 100%;
+		    width: 13px;
+		    height: 13px;
+
+		    &:hover span {
+		    	background: rgba(0, 0, 0, .3);
+		    }
+
+		    &.active span,
+		    &.active:hover span {
+		    	background: rgba(0, 0, 0, .7);
+		    }
+
+		    span {
+			    width: 5px;
+			    margin: 0;
+			    border-radius: 100%;
+			    height: 5px;
+			    background: transparent;
+	            transition: all .15s ease-in-out;
+		    }    	
+	    }
+	}
+}
+
+
+/* ====================================================
+ *   Thumbnails slider 'prev' and 'next' styling
+ * ==================================================== */
+
+.thumbs-slider {
+	.owl-controls .owl-buttons {
+
+		[class*="owl-"] {
+		    font-size: 18px;
+		    width: 35px;
+		    height: 35px;
+		    line-height: 32px;
+		    color: rgba(255, 255, 255, 0.7);
+		    background: rgba(0, 0, 0, 0.3);
+		    position: absolute;
+		    top: 50%;
+		    margin: 0;
+		    margin-top: -20px !important;
+		    padding: 0;
+		    opacity: 0;
+		    visibility: hidden;
+            transition: all 0.3s;
+
+            &:hover { // on next and right button
+            	background: rgba(0, 0, 0, 0.5);
+			    color: rgba(255, 255, 255, 0.9);
+            }
+		}
+
+		.owl-prev {
+		    left: 0;
+		    margin-left: 20px;
+		    border-radius: 0 3px 3px 0;
+
+		    &:hover {
+		    	margin-left: 0;
+		    }
+		}
+
+		.owl-next {
+		    right: 0;
+		    margin-right: 20px;
+	    	border-radius: 3px 0 0 3px;
+
+		    &:hover {
+		    	margin-right: 0;
+		    }
+		}
+	}
+
+	&:hover { // on the slider
+		.owl-controls .owl-buttons {
+			[class*="owl-"] {
+			    opacity: 1;
+			    visibility: visible;				
+			}
+
+			.owl-prev {
+			    margin-left: 5px; // related to slide padding left or right			
+			}
+
+			.owl-next {
+				margin-right: 5px; // related to slide padding left or right
+			}
+		}
+	}
+}
+

@@ -1,0 +1,1019 @@
+/**
+ * File Name: style-rtl.css
+ *
+ * This file contains all "Right to Left" needed
+ * adds and changes. It's imported under style.css
+ * in HTML files.
+ *
+ */
+
+
+/**
+ * styles-rtl.css file is divided as the following:
+ *
+ * ( 01 ) - style.css
+ * ( 02 ) - responsive.css
+ *
+ */
+
+
+// Imports ( Others at Bottom, perhaps! )
+// ==========================================
+
+@import "bootstrap-rtl";
+
+// ==========================================
+
+
+
+ /**
+  *	-------------------------------------------------------------------------------
+  *	( 01 ) - style.css
+  *	-------------------------------------------------------------------------------
+  *
+  *  This part contains all applied codes in style.css file
+  *
+  *	------
+  *
+  *  style.css divided to the following sections:
+  *
+  *	   |
+  *	   |-->  [ 1 ] - General Basics
+  *	   |-->  [ 2 ] - Form Settings
+  *	   |-->  [ 3 ] - Top Bar
+  *	   |-->  [ 4 ] - Logo Bar
+  *	   |-->  [ 5 ] - Nav Bar
+  *	   |-->  [ 6 ] - Page Title
+  *	   |-->  [ 7 ] - Banner
+  *	   |-->  [ 8 ] - Content
+  *	   |-->  [ 9 ] - Single Pages
+  *	   |-->  [ 10 ] - Footer
+  *
+  */
+
+body {
+	// font: 14px/1.7 "Cairo", sans-serif;
+	font-family: "Cairo", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -1px;
+}
+
+h4,
+h5,
+h6 {
+	letter-spacing: -0.3px;
+}
+
+ h1 { font-size: 38px; }
+ h2 { font-size: 32px; }
+ h3 { font-size: 26px; }
+ h4 { font-size: 20px; }
+ h5 { font-size: 16px; }
+ h6 { font-size: 14px; }
+
+.owl-carousel {
+	direction: ltr;
+}
+
+ /**
+  *  [ 1 ] - General Basics
+  *	=========================
+  */
+
+.breadcrumb {
+	right: auto;
+	left: 0;
+
+    li + li::before {
+      padding: 0 0 0 4px;
+    }
+}
+
+table {
+	text-align: right;
+}
+
+.pull-right {
+	float: left !important;
+}
+
+
+
+
+ /**
+  *  [ 2 ] - Form Settings
+  *	========================
+  */
+
+
+ /**
+  *  [ 3 ] - Top Bar
+  *	==================
+  */
+
+.call-us {
+i {
+	margin: 0 0 0 5px;
+}
+
+	span {
+		font-weight: 700;
+	}
+}
+
+.top-bar-adds {
+	text-align: left;
+
+	ul {
+		left: 0;
+	}
+
+	> li:last-child {
+		padding-left: 0;
+		padding-right: 3px;
+	}
+
+	> li:nth-child(2) {
+		padding-left: 18px;
+	}
+
+	li {
+		+ li::before {
+			right: -5px;
+		}
+
+		+ li:last-child::before {
+			right: -10px;
+		}
+	}
+}
+
+.my-accounts i {
+	margin: 0 0 0 2px;
+}
+
+
+ /**
+  *  [ 4 ] - Logo Bar
+  *	===================
+  */
+
+.search-product {
+	form {
+		select {
+			font-weight: 700;
+			margin: 0 25px 0 0;
+			background-position: center left;
+			width: 100px;
+			padding-left: 30px;
+
+		}
+	
+		input[type="submit"] {
+			float: left;
+			right: auto;
+			left: -3px;
+			font-size: 16px;
+		}
+	}
+}
+
+.cart-counter span:first-child small {
+	right: 45px;
+}
+
+.cart-counter span:first-child i {
+	margin-left: 10px;
+}
+
+.cart-counter span:last-child {
+	font-size: 16px;
+}
+
+
+#cart-dropdown {
+	right: auto;
+	left: 15px;
+
+	.cart-close {
+		left: auto;
+		right: 20px;
+	}
+
+	.view-cart {
+	  float: left;
+	}
+}
+
+.cart-dd-list  {
+	li {
+		padding: 25px 67px 25px 0;
+
+		.thumb {
+			right: 0;
+		}
+
+		.quantity {
+			right: auto;
+			left: 0;
+		}
+
+		.close {
+			left: auto;
+			right: -10px;
+		}
+
+		&:hover {
+			padding-left: 0;
+			padding-right: 72px;
+
+			.thumb {
+				left: auto;
+				right: 5px;
+			}
+
+			.quantity {
+				right: auto;
+				left: -5px;
+			}
+
+			.close {
+				left: auto;
+				right: -5px;
+			}
+		}
+
+		h6 {
+			padding: 0 0 0 20px;
+		}
+	}
+}
+
+
+
+ /**
+  *  [ 5 ] - Nav Bar
+  *	==================
+  */
+
+.home-link {
+	float: right;
+
+	&::before,
+	&::after {
+		right: auto;
+		left: -6px;
+		border-left-width: 6px;
+		border-right-width: 0;
+	}
+}
+
+.main-menu {
+	left: auto;
+	right: 15px;
+	letter-spacing: -0.3px;
+}
+
+.main-menu > li {
+	float: right;
+}
+
+.main-menu > li > a {
+	font-size: 14px;
+}
+
+.main-menu ul.dropdown-menu {
+	right: 0;
+	left: auto;
+}
+
+.main-menu ul.dropdown-menu ul {
+	left: auto !important;
+	right: 100% !important;
+}
+
+.main-menu ul.dropdown-menu li a {
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.main-menu.sf-arrows > li > a.sf-with-ul::after {
+	margin: 0 6px 0 0;
+}
+
+.main-menu.sf-arrows .dropdown-menu a.sf-with-ul::after {
+	right: auto;
+	left: 15px;
+	top: 14px;
+	content: "\f104";
+}
+
+.nav-new,
+.nav-hot {
+	padding: 1px 4px 2px;
+	right: auto;
+	left: 12px;
+
+	&::after {
+		border-left-width: 0;
+		border-right-width: 9px;
+		right: auto;
+		left: 0;
+	}
+}
+
+/* Mobile Menu */
+.mobile-menu ul {
+	float: none;
+	padding: 0 20px 0 0;
+}
+
+.mobile-menu li a {
+	padding-left: 30px;
+	padding-right: 0;
+}
+
+.mobile-menu.sf-arrows > li > a.sf-with-ul::after {
+	right: auto;
+	left: 0;
+	content: "\f104";
+}
+
+.mobile-menu.sf-arrows .dropdown-menu a.sf-with-ul::after {
+	right: auto;
+	left: 0;
+}
+
+.hot-deals-btn {
+	font-size: 14px;
+	left: -5px;
+	right: auto;
+	top: 17px;
+	float: left;
+}
+
+
+
+ /**
+  *  [ 6 ] - Page Title
+  *	=====================
+  */
+
+
+
+
+
+ /**
+  *  [ 7 ] - Banner
+  *	=================
+  */
+
+.slide-content .description {
+	font-size: 18px;
+	font-family: "Cairo", sans-serif;
+}
+
+.btn {
+	font-size: 17px;
+	letter-spacing: -0.3px;
+	font-family: "Cairo", sans-serif;
+}
+
+
+ /**
+  *  [ 8 ] - Content
+  *	==================
+  */
+
+/* Intro 2 */
+.featured-box {
+	text-align: left;
+}
+
+.featured-box img {
+	left: auto;
+	right: 10px;
+}
+
+.featured-box .featured-box-content {
+	border-right: none;
+	border-left: 1px solid #fff;
+}
+
+.featured-box .featured-box-content::before, 
+.featured-box .featured-box-content::after {
+	background-image: -webkit-gradient(
+		linear,
+		right top,
+		left top,
+		color-stop(0.35, transparent),
+		color-stop(0.5, #fff)
+	);
+	background-image: -o-linear-gradient(left, transparent 35%, #fff 50%);
+	background-image: -moz-linear-gradient(left, transparent 35%, #fff 50%);
+	background-image: -webkit-linear-gradient(left, transparent 35%, #fff 50%);
+	background-image: -ms-linear-gradient(left, transparent 35%, #fff 50%);
+	background-image: linear-gradient(to left, transparent 35%, #fff 50%); 
+}
+
+.featured-box .featured-box-content a {
+	font-size: 13px;
+}
+
+/* Great Offers */
+.offers-slider .owl-item {
+	direction: rtl;
+}
+
+.offer-details {
+	padding: 35px 0 40px 20px;
+}
+
+.offer-details .section-title .rating {
+	right: auto;
+	left: 0;
+}
+
+.features-list li {
+	padding: 0 0 0 30px;
+}
+
+.features-list li::before {
+	margin: 0 0 0 8px;
+	content: "\f0d9";
+}
+
+/* Offers Thumbs Slider */
+.offer-thumbs li:last-child {
+	margin-right: 10px;
+}
+
+.offer-thumbs li:first-child {
+	margin-right: 0;
+}
+
+.add-item-counter {
+	float: right;
+	margin: 0 0 0 12px;
+}
+
+.offer-meta {
+	float: right;
+}
+
+.deadline-timer li:last-child {
+	margin-right: 29px;
+}
+
+.deadline-timer li:first-child {
+	margin-right: 0;
+}
+
+/* Great Offers */
+.sale-badge-2 {
+	line-height: 55px !important;
+}
+
+/* Featured Products */
+.featured-products-slider .owl-controls .owl-buttons {
+	right: auto;
+	left: 15px;
+}
+
+.featured-products-slider .owl-controls .owl-buttons .owl-prev {
+	right: auto;
+}
+
+.featured-products-slider .owl-controls .owl-buttons .owl-next {
+	left: 4px;
+}
+
+
+/* Recent News */
+.entry-small {
+	padding: 0 0 0 40px;
+}
+
+.entry-small .entry-image {
+	left: auto;
+	right: 0;
+	margin-right: -1px;
+}
+
+.entry-small .entry-title, .entry-small .entry-meta, .entry-small .entry-content {
+	padding: 0 190px 0 0;
+}
+
+.entry-meta ul li + li {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.entry-meta ul li:first-child {
+    padding-left: 14px;
+    margin-left: 10px;
+    border-left: 1px solid #ddd;
+}
+
+/* Our Products */
+.op-tabs {
+	right: auto;
+	left: 15px;
+}
+
+.op-tabs li a {
+	font-size: 14px;
+}
+
+
+ /**
+  *  [ 09 ] - Single Pages
+  *	========================
+  */
+
+/* Single Product */
+.single-product .offer-details {
+	padding: 35px 10px 40px 0;
+}
+
+/* Similar Products Slider */
+.similar-products-slider .owl-controls .owl-buttons {
+	right: auto;
+	left: 15px;
+}
+
+.similar-products-slider .owl-controls .owl-buttons .owl-prev {
+	right: auto;
+}
+
+.similar-products-slider .owl-controls .owl-buttons .owl-next {
+	left: 4px;
+}
+
+
+ /**
+  *  [ 09 ] - Single Pages
+  *	========================
+  */
+
+/* Cart Products */
+#cart-items tbody tr td:last-child,
+#cart-items thead tr th:last-child,
+#cart-checkout table tbody tr td:last-child {
+	border-right: 1px solid #eee;
+	border-left: none;
+}
+
+
+ /**
+  *  [ 10 ] - Footer
+  *	=================
+  */
+
+.contact-info li {
+	padding: 0 120px 0 0;
+}
+
+.contact-info li .title {
+	left: auto;
+	right: 0;
+	width: 120px;
+}
+
+.contact-info li .title i {
+	margin: 0 0 0 10px;
+	text-align: left;
+}
+
+.links-list li::before {
+	float: right;
+	margin: 0 0 0 8px;
+	transform: rotate(180deg);
+}
+
+.footer-subscribe input[type="submit"] {
+	right: auto;
+	left: 0;
+}
+
+.footer-subscribe i {
+	right: auto;
+	left: 15px;
+}
+
+/* Mini Footer */
+.made-by {
+	text-align: left;
+}
+
+
+
+
+
+
+/**
+ *	-------------------------------------------------------------------------------
+ *	( 02 ) - responsive.css
+ *	-------------------------------------------------------------------------------
+ *
+ *  This part contains the responsive modifications for small devices widths
+ *
+ *	------
+ *
+ *  It has the following code:
+ *
+ *	   |
+ *	   |-->  [ 1 ] - Width From 1200px to 0
+ *	   |-->  [ 2 ] - Width From 992px to 0
+ *	   |-->  [ 3 ] - Width From 768px to 0
+ *	   |-->  [ 4 ] - Width From 480px to 0
+ *	   |-->  [ 5 ] - Width From 320px to 0
+ *	   |-->  [ 6 ] - Height Form 768px to 0
+ *	   |-->  [ 5 ] - Height Form Maximmum to 768px
+ *	   |-->  [ 8 ] - Height Form Maximmum to 900px
+ *
+ */
+
+
+/**
+ *  [ 1 ] - Width From 1200px to 0
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+@media (max-width: 1200px) {
+
+	.intro-images li {
+		width: 33.3333%;
+	}
+
+	.categories-samples {
+		margin-bottom: -30px;
+
+	 .box {
+			margin-bottom: 30px;
+		}
+	}
+
+	.deadline-timer li:last-child {
+		margin-top: 20px;
+	}
+
+} // < 1200px width
+
+
+/**
+ *  [ 2 ] - Width From 992px to 0
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+@media (max-width: 992px) {
+
+	/* Logo Bar */
+	#logo-bar {
+		height: auto;
+		padding: 40px 0;
+
+		.logo {
+			text-align: center;
+			display: block;
+			margin-bottom: 30px;
+			top: 0;
+		}
+
+		.search-product {
+			top: initial;
+		}
+
+		.cart-counter {
+			border: none;
+			margin-top: 45px;
+
+			span:first-child {
+				margin-top: 0;
+			}
+		}
+
+	}
+
+	/* Nav Bar */
+	#nav-bar {
+		padding: 15px 0;
+	}
+
+	#nav-bar,
+	#nav-bar-wrap {
+		height: auto;
+	}
+
+	.home-link {
+	    height: 35px;
+	    line-height: 35px;
+	    width: 40px;
+	    border-radius: 2px;
+	    font-size: 20px;
+	    float: none;
+	    margin-top: 15px;
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+
+	.main-menu {
+		left: 0;
+		display: none;
+	}
+
+	.hot-deals-btn {
+		font-size: 14px;
+		left: 15px;
+		right: auto;
+	}
+
+	#mobile-menu {
+		display: block;
+
+		.mobile-menu {
+			margin: 15px 0 5px;
+
+			.nav-new,
+			.nav-hot {
+			    position: relative;
+			    top: -2px;
+			    right: 0;
+			    margin: 0 10px 0 0;
+	    	}
+		}
+
+		.mobile-menu li a {
+			font-size: 14px;
+		}
+
+		.mobile-menu ul a {
+			font-size: 13px;
+		}
+	}
+
+	.mobile-menu-btn {
+		margin: 0 20px 0 0 !important;
+	}
+
+	.nav-social-icons {
+		border: none;
+		text-align: center;
+		clear: both;
+		margin-top: 22px;
+		padding: 15px 0 1px;
+		border-top: 1px solid #eee;
+
+		li {
+			width: auto;
+			top: 0;
+
+			a {
+				padding: 0 5px;
+			}
+		}
+	}
+
+	/* Slider */
+	.banner-slider ul li {
+		background-size: initial;
+	}
+
+	.banner-center-box {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	/* Intro 2 */
+	.featured-box.box-1 {
+		margin-bottom: 30px;
+	}
+
+	/* New Offers */
+	.deadline-timer li:last-child {
+		margin-top: 0;
+	}
+
+	.sale-badge-2 {
+		line-height: 54px;
+	}
+
+	.offers-slider {
+		margin-top: 80px;
+
+		.slide-wrap {
+			padding: 30px;
+
+			.offer-details {
+				padding-top: 60px;
+			}
+		}
+	}
+
+	/* Recent News */
+	.entry {
+		margin-bottom: 30px !important;
+	}
+
+	.entry-image img {
+		width: 100%;
+	}
+
+	/* Our Products */
+	.op-tabs {
+		position: initial;
+		margin-bottom: 50px;
+	}
+
+	/* Footer */
+	.footer-widget {
+		margin-bottom: 50px;
+	}
+
+	.footer-subscribe + img {
+		display: block;
+	}
+
+	/* Footer Mini */
+	.copyrights-message,
+	.made-by {
+		text-align: center;
+	}
+
+	.made-by {
+		margin-top: 5px;
+	}
+
+
+} // < 992px width
+
+
+/**
+ *  [ 3 ] - Width From 768px to 0
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+@media (max-width: 768px) {
+
+	/* Top Bar */
+	#top-bar {
+		height: auto;
+		padding: 5px 0;
+	}
+
+	.call-us {
+		text-align: center;
+	}
+
+	.top-bar-adds {
+		text-align: center;
+		margin-top: 5px;
+	}
+
+	/* Search Product */
+	.search-product {
+		top: initial;
+		width: 405px;
+
+		form input[type="text"] {
+			width: 145px;
+		}
+
+		form select {
+			padding-right: 30px;
+			width: 105px;
+		}
+	}
+
+	/* Intro 1 */
+	.intro-1 .col-sm-3 {
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	/* Our Products */
+	.op-tabs {
+		margin-bottom: 20px;
+
+		li {
+			margin-bottom: 30px;
+
+		}
+	} 
+
+	/* Recent News */
+	.entry-small {
+		padding: 30px 40px;
+	}
+
+	.entry.entry-small .entry-image {
+		margin-top: -31px;
+		margin-right: -41px;
+	}
+
+	.entry-small .entry-title, 
+	.entry-small .entry-meta, 
+	.entry-small .entry-content {
+		padding-right: 0;
+	}
+
+
+} // < 768px width
+
+
+/**
+ *  [ 4 ] - Width From 480px to 0
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+@media (max-width: 480px) {
+	
+	/* Search Product */
+	.search-product {
+		top: initial;
+		width: 305px;
+
+		form input[type="text"] {
+			width: 80px;
+		}
+
+		form select {
+			padding-right: 0;
+			width: 92px;
+		}
+	}
+
+	.intro-images li {
+		width: 50%;
+	}
+
+	.offer-meta {
+		margin-top: 10px;
+
+		li:first-child {
+			margin-right: 0;
+		}
+	}
+
+
+} // < 480px width
+
+
+/**
+ *  [ 5 ] - Width From 320px to 0
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+@media (max-width: 320px) {
+
+} // < 320px width
+
+
+
+/**
+ *  [ 6 ] - Height From 768px to 0
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+@media (max-height : 768px) {
+
+
+
+} // < 768px height
+
+
+/**
+ *  [ 5 ] - Height From Maximmum to 768px
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+@media (min-height : 768px) {
+
+
+
+} // > 768px height
+
+
+/**
+ *  [ 8 ] - Height From Maximmum to 900px
+ *	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+@media (min-height : 900px) {
+
+
+} // > 900px height
+
+
+
